@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BattleCounter</string>
+    <string name="timePassed">Time passed</string>
+    <string name="roundsPassed">Rounds passed</string>
+    <string name="activeFighter">Active Fighter</string>
+    <string name="addMembers">Add Fighter</string>
+    <string name="createBattleplan">New Battleplan</string>
+    <string name="updateBattleplan">Update Battleplan</string>
+    <string name="fighter">Fighter</string>
+    <string name="roll">Roll</string>
+    <string name="resetFighters">Reset Fighters</string>
+    <string name="add">Add</string>
+
+    <string-array name="PCs">
+        <item>Player1</item>
+        <item>Player2</item>
+        <item>Player3</item>
+        <item>Player4</item>
+        <item>Player5</item>
+        <item>Player6</item>
+    </string-array>
+</resources>
