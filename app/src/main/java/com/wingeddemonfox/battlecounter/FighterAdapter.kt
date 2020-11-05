@@ -8,26 +8,34 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 
-class FighterAdapter (private val items: ArrayList<Fighter>, private val context: Context) :
-    RecyclerView.Adapter<ViewHolder>() {
+class FighterAdapter (private val fighters: ArrayList<Fighter>) :
+    RecyclerView.Adapter<FighterAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
-        return items.size
+        return fighters.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.recyclerview_item_row, parent, false))
+        val context = parent.context
+        val inflater = LayoutInflater.from(context)
+        val fighterView = inflater.inflate(R.layout.recyclerview_item_row, parent, false)
+        return ViewHolder(fighterView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvFighter.text = items[position].fighterName
-        holder.tvItemRoll.text = items[position].roll.toString()
+        val tvFighter = holder.tvFighter
+        tvFighter.setText(fighters[position].fighterName)
+
+        val tvItemRoll = holder.tvItemRoll
+        tvItemRoll.setText(fighters[position].roll.toString())
     }
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+        val tvFighter: TextView = view.item_title
+        val tvItemRoll: TextView = view.itemRoll
+    }
+
 }
 
-class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-    val tvFighter: TextView = view.item_title
-    val tvItemRoll: TextView = view.itemRoll
-}
 
 data class Fighter(val fighterName: String, val roll: Int)

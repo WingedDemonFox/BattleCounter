@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".BattleInitiativeOverviewActivity"
-            android:parentActivityName=".ShowMemberAndOrderOverviewActivity"/>
+            android:parentActivityName=".MainOverviewActivity"/>
         <activity
             android:name=".AddMembersAndOrderActivity"
-            android:parentActivityName=".ShowMemberAndOrderOverviewActivity" />
-        <activity android:name=".ShowMemberAndOrderOverviewActivity">
+            android:parentActivityName=".MainOverviewActivity" />
+        <activity android:name=".MainOverviewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -8,13 +8,13 @@ import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.isVisible
-import com.wingeddemonfox.battlecounter.ShowMemberAndOrderOverviewActivity.Companion.fighters
+import com.wingeddemonfox.battlecounter.MainOverviewActivity.Companion.fighters
 
 //use this to add member and order
 class AddMembersAndOrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_members_and_order)
+        setContentView(R.layout.activity_add_fighter)
 
         val textView = findViewById<AutoCompleteTextView>(R.id.addFighterName)
         val pcs: Array<out String> = resources.getStringArray(R.array.PCs)

@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.view.children
-import com.wingeddemonfox.battlecounter.ShowMemberAndOrderOverviewActivity.Companion.fighters
+import com.wingeddemonfox.battlecounter.MainOverviewActivity.Companion.fighters
 
 class BattleInitiativeOverviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
