@@ -3,7 +3,7 @@ package com.wingeddemonfox.battlecounter
 class CurrentBattleplan {
     companion object{
         var currentInitiative = 0
-        private var currentActivePc = ""
+        var currentActivePc = ""
         var roundsPassed = 1
         var timePassed = 0
         var maxFightersInBattle = 0

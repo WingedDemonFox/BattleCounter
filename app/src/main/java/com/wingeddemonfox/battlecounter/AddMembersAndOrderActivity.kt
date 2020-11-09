@@ -3,10 +3,7 @@ package com.wingeddemonfox.battlecounter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.core.view.isVisible
 import com.wingeddemonfox.battlecounter.MainOverviewActivity.Companion.fighters
 
@@ -36,9 +33,6 @@ class AddMembersAndOrderActivity : AppCompatActivity() {
 
         fighterName.text = null
         fighterRoll.text = null
-        val notification = findViewById<TextView>(R.id.notification)
-        notification.text =
-            "Added Fighter $fighterNameText with initiative roll $fighterRollText. Click Back-Button to go back."
-        notification.isVisible = true
+        Toast.makeText(this, "Added Fighter $fighterNameText with initiative roll $fighterRollText. Click Back-Button to go back.", Toast.LENGTH_SHORT).show()
     }
 }

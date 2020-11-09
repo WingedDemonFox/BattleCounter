@@ -73,6 +73,7 @@ class BattleInitiativeOverviewActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.activeFighter).apply{
             text = (linearLayout.children.elementAt(CurrentBattleplan.currentInitiative) as Button).text.toString()
+            CurrentBattleplan.currentActivePc = (linearLayout.children.elementAt(CurrentBattleplan.currentInitiative) as Button).text.toString()
         }
     }
 

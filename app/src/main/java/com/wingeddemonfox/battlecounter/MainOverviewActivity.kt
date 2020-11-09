@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,11 +36,22 @@ class MainOverviewActivity : AppCompatActivity() {
             val intent = Intent(this@MainOverviewActivity, AddMembersAndOrderActivity::class.java)
             startActivityForResult(intent, newFighterActivityRequestCode)
         }
+        updateBattleValuesOnView()
     }
 
     private fun addFighters(){
         fighters.add(Fighter("Player1",4))
         fighters.add(Fighter("Player2",12))
+        fighters.add(Fighter("Player3", 8))
+        fighters.add(Fighter("Player4", 18))
+        fighters.add(Fighter("Player5", 17))
+        fighters.add(Fighter("Player6", 15))
+        fighters.add(Fighter("Player7", 10))
+        fighters.add(Fighter("Player3", 8))
+        fighters.add(Fighter("Player4", 18))
+        fighters.add(Fighter("Player5", 17))
+        fighters.add(Fighter("Player6", 15))
+        fighters.add(Fighter("Player7", 10))
         fighters.add(Fighter("Player3", 8))
         fighters.add(Fighter("Player4", 18))
         fighters.add(Fighter("Player5", 17))
@@ -83,5 +95,19 @@ class MainOverviewActivity : AppCompatActivity() {
 
     companion object{
         val fighters = ArrayList<Fighter>()
+    }
+
+    private fun updateBattleValuesOnView(){
+        findViewById<TextView>(R.id.roundsPassed).apply{
+            text = CurrentBattleplan.roundsPassed.toString()
+        }
+
+        findViewById<TextView>(R.id.timePassed).apply{
+            text = CurrentBattleplan.timePassed.toString() + " seconds"
+        }
+
+        findViewById<TextView>(R.id.activeFighter).apply{
+            text = CurrentBattleplan.currentActivePc
+        }
     }
 }

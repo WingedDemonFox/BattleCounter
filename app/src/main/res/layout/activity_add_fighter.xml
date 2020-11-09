@@ -8,61 +8,33 @@
 
     <AutoCompleteTextView
         android:id="@+id/addFighterName"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:hint="@string/fighter"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/addFighterRoll"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/addFighterRoll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
         android:id="@+id/addFighterRoll"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:hint="@string/roll"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/addFighter"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addFighterName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintBottom_toTopOf="@+id/addFighter"
+        app:layout_constraintTop_toBottomOf="@+id/addFighterName" />
 
     <Button
         android:id="@+id/addFighter"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:onClick="addFighterToList"
         android:text="@string/add"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addFighterRoll"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <TextView
-        android:id="@+id/notification"
-        android:layout_width="632dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
-        android:text="@string/addMembers"
-        android:textSize="24sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addFighterName"
-        tools:visibility="invisible" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFighterRoll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
